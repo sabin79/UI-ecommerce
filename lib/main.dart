@@ -150,14 +150,14 @@ Data Structures
               ),
             ],
           ),
-          backgroundColor: Colors.deepPurple[200],
+          backgroundColor: Colors.deepPurple[150],
           body: Center(
             child: Container(
               height: 300,
               width: 300,
-              padding: const EdgeInsets.symmetric(vertical: 25),
+              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
               decoration: BoxDecoration(
-                  color: Colors.green[200],
+                  color: Colors.green[400],
                   borderRadius: BorderRadius.circular(25)),
               child: const Text("Sabin dahal",
                   style: TextStyle(
