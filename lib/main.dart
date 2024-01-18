@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'todopage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -133,39 +135,7 @@ Data Structures
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text("Learning from begining"),
-            backgroundColor: Colors.deepPurple,
-            elevation: 0.0,
-            centerTitle: true,
-            leading: const Icon(Icons.menu),
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search),
-                color: Colors.black,
-              ),
-            ],
-          ),
-          backgroundColor: Colors.deepPurple[150],
-          body: Center(
-            child: Container(
-              height: 300,
-              width: 300,
-              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
-              decoration: BoxDecoration(
-                  color: Colors.green[400],
-                  borderRadius: BorderRadius.circular(25)),
-              child: const Text("Sabin dahal",
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
-                  )),
-            ),
-          ),
-        ));
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false, home: ToDoPage());
   }
 }
