@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'pages/todopage.dart';
 
-import 'todopage.dart';
+void main() async {
+  await Hive.initFlutter();
 
-void main() {
-  runApp(MyApp());
+  // open box
+  var box = await Hive.openBox("mybox");
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  String name = "Sabin  Dahal";
-  int age = 23;
-  double pi = 3.14159;
-  bool isBeginer = true;
+  const MyApp({super.key});
+
+  // String name = "Sabin  Dahal";
+  // int age = 23;
+  // double pi = 3.14159;
+  // bool isBeginer = true;
 
 /*
 Basic  Math Operators
@@ -135,7 +141,10 @@ Data Structures
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: ToDoPage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const ToDoPage(),
+      theme: ThemeData(primarySwatch: Colors.yellow),
+    );
   }
 }
